@@ -1,0 +1,82 @@
+/*点赞心形点赞图标*/
+.heart-label{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+    transform: scale(0.3);
+}
+.heart-checkbox{
+    display: none;
+}
+.btn46{
+    width: 40px;
+    height: 36px;
+    position: relative;
+}
+.btn46:before,.btn46:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    width: 30px;
+    height: 50px;
+    background-color: #666666;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg);
+    transition: all 0.4s;
+}
+.btn46:before {
+    left: 23px;
+    transform: rotate(45deg);
+}
+.ani46{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 40px 0 -4px #ff0000,
+    40px 0 0 -4px #ff0000,
+    0 -40px 0 -4px #ff0000,
+    -40px 0 0 -4px #ff0000,
+    -24px 24px 0 -4px #ff0000,
+    -30px -30px 0 -4px #ff0000,
+    30px -30px 0 -4px #ff0000,
+    24px 24px 0 -4px #ff0000;
+    opacity: 0;
+}
+.heart-checkbox:checked + .btn46:before,.heart-checkbox:checked + .btn46:after{
+    background-color: #ff0000;
+}
+.heart-checkbox:checked + .btn46{
+    animation: love-eff46 0.2s ease-out forwards;
+}
+.heart-checkbox:checked ~ .ani46{
+    animation: anieff46 0.5s ease-out forwards;
+}
+@keyframes love-eff46{
+    50% {
+        transform: scaleY(0.6);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes anieff46{
+    0% {
+        transform: scale(0);
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,271 @@
+.user-info{
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    position: absolute;
+    margin-top: 6%;
+    margin-left: 14%;
+    width: 40%;
+    height: 10%;
+}
+
+
+
+.profile-picture{
+    width: 15%;
+    height: auto;
+    aspect-ratio: 1;
+    background-image: url('../image/profile_picture.jpg');
+    background-size: cover;
+    border: 2px solid #6d2a36;
+    box-shadow:
+            0 0 0 6px #fce6e9, /* 外层边框 */
+            0 0 0 8px #6d2a36; /* 中间间隔色 */
+}
+
+@font-face {
+    font-family: 'HYPPTiJ';
+    src: url('../font/HYPPTiJ.ttf');
+}
+
+@font-face {
+    font-family: 'julies';
+    src: url('../font/julies.ttf');
+}
+
+
+.user-name{
+    position: absolute;
+    margin-left: 18%;
+    margin-bottom:2%;
+    font-size: 40px;
+    color: #ffc4cc;
+    font-weight: bold;
+    font-family: 'HYPPTiJ', serif;
+}
+
+.blog{
+    position: absolute;
+    margin-left: 18%;
+    margin-bottom: -2%;
+    font-size: 30px;
+    color: rgba(130, 40, 58, 0.51);
+    font-weight: bold;
+    font-family: 'HYPPTiJ', serif;
+}
+
+.star{
+    position: absolute;
+    top: -5%;
+    right: 15%;
+    font-size: 100px;
+    font-family: "julies", serif;
+    color: #6d2a36;
+}
+
+.album-left{
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 12%;
+    width: 38%;
+    height: 60%;
+}
+
+
+
+.album-item{
+    position: absolute;
+    width:30%;
+    height: 40%;
+    background-color: #FFFFFF;
+    transition: transform 0.8s;
+    border: 10px solid #FFFFFF;
+    box-shadow: 0 0 0 3px #6d2a36; /* 外层边框 */
+}
+
+.album-item:hover{
+    transform: scale(1.5) rotate(0deg) !important;
+    z-index: 100;
+}
+
+.ima{
+    cursor: pointer;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+
+#item-1{
+    margin-left: 4%;
+    margin-top: 4%;
+    transform: rotate(-12deg);
+}
+
+#item-1 .ima{
+    background-image: url('../image/a.png');
+}
+
+
+
+#item-2{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 10%;
+    width:30%;
+    height: 40%;
+    background-color: #FFFFFF;
+    transition: transform 0.8s;
+    transform: rotate(12deg);
+    border: 10px solid #FFFFFF;
+    box-shadow: 0 0 0 3px #6d2a36; /* 外层边框 */
+}
+
+#item-2 .ima{
+    background-image: url('../image/b.png');
+}
+
+#item-3{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 40%;
+    width:30%;
+    height: 40%;
+    background-color: #FFFFFF;
+    transition: transform 0.8s;
+    transform: rotate(-7deg);
+    border: 10px solid #FFFFFF;
+    box-shadow: 0 0 0 3px #6d2a36; /* 外层边框 */
+}
+#item-3 .ima{
+    background-image: url('../image/c.png');
+}
+
+.album-right{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 52%;
+    width: 35%;
+    height: 80%;
+}
+
+.album-right .album-item{
+    position: absolute;
+    width:30%;
+    height: 30%;
+}
+#item-4{
+    margin-left: 10%;
+    margin-top: 4%;
+    transform: rotate(-12deg);
+}
+
+#item-4 .ima{
+    background-image: url('../image/d.png');
+}
+#item-5{
+    margin-left: 50%;
+    margin-top: 20%;
+    transform: rotate(12deg);
+}
+
+#item-5 .ima{
+    background-image: url('../image/e.png');
+}
+#item-6{
+    margin-left: 60%;
+    margin-top: 50%;
+    transform: rotate(-12deg);
+}
+
+#item-6 .ima{
+    background-image: url('../image/f.png');
+}
+#item-7{
+    margin-left: 20%;
+    margin-top: 60%;
+    transform: rotate(12deg);
+}
+
+#item-7 .ima{
+    background-image: url('../image/g.png');
+}
+
+.tab-label{
+    max-width: 10%;
+    max-height: 25%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    right: -0.65%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    isolation: isolate;
+    /*background-color: rgba(255, 0, 0, 0.24);*/
+}
+
+.tab-item {
+    will-change:transform;
+    width: 90%;
+    height: 40%;
+    position: relative;
+    transition: transform 0.3s ease; /* 添加过渡动画 */
+    cursor: pointer; /* 显示手型光标 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tab-item .label{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    clip-path: polygon(100% 10%, 70% 50%, 100% 90%, 0% 90%, 0% 10%);
+}
+
+.tab-item .shadow{
+    position: absolute;
+    top: -2px;    /* 边框外扩量 */
+    left: -2px;
+    width: calc(100% + 10px); /* 补偿外扩量 */
+    height: calc(100% + 4px);
+    background: rgb(109, 42, 54); /* 边框颜色 */
+    clip-path: polygon(
+            100% 8%,    /* 调整顶点坐标外扩 */
+            70% 50%,
+            100% 92%,
+            0% 92%,
+            0% 8%
+    );
+}
+
+.tab-item .tab-text{
+    position: absolute;
+    font-size:200%;
+    font-family: 'HYPPTiJ', serif;
+}
+
+
+#main-tab{
+    background-color: #fdcd85;
+    position: relative; /* 新增定位 */
+}
+
+#collection-tab{
+    background-color: #f9978d;
+    position: relative; /* 新增定位 */
+}
+
+#add-tab{
+    background-color: #ecb5fd;
+    position: relative; /* 新增定位 */
+}
+
+.tab-item:last-child {
+    transform: translateX(-25%);
+}
